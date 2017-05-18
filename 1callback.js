@@ -10,37 +10,6 @@ let creditCheck = function(amount, customer, callback) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let customer
 customer = {
   name:"dave",

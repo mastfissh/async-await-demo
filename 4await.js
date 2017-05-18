@@ -9,37 +9,6 @@ let creditCheck = async function(amount, customer) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 main = async function(){
   try{
     let customer = {

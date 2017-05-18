@@ -13,37 +13,6 @@ let creditCheck = function(amount, customer) {
   })
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let audit = function(data) {
   return new Promise((resolve, reject) => {
     if (data.toLowerCase() == "need more credit"){

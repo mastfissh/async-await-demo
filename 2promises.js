@@ -12,36 +12,6 @@ let creditCheck = function(amount, customer) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let customer
 
 customer = {
