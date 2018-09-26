@@ -1,14 +1,27 @@
+// Wrap the legacy credit check code in a promise
 let creditCheck = function(amount, customer) {
   return new Promise((resolve, reject) => {
-    if (!customer) {
-      reject(new Error("missing customer!"))
-    }
-    if (customer.credit > amount) {
-      resolve("ok for:"+ amount.toFixed(2))
-    } else {
-      resolve("need more credit")
-    }
+    legacyCreditCheck(amount, customer, function(err, result){
+      if (err){
+        reject(err);
+      }
+      else{
+        resolve(result);
+      }
+    })
   })
+}
+
+// Pretend we have to do a network call here, or access a database
+let legacyCreditCheck = function(amount, customer, callback) {
+  if (!customer) {
+    callback(new Error("missing customer!"),null)
+  }
+  if (customer.credit > amount) {
+    callback(null,"ok for:"+ amount.toFixed(2))
+  } else {
+    callback(null,"need more credit")
+  }
 }
 
 
